@@ -4,14 +4,13 @@ import numpy as np
 from tensorflow import keras
 from PIL import Image
 import pickle
-from tensorflow.keras.applications.mobilenet_v2 import ConvNeXtXLarge
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from keras.layers import GlobalAveragePooling2D
 from keras.models import Model
 
 
 
-IMAGE_ADDRESS="https://insideclimatenews.org/wp-content/uploads/2023/03/wildfire_thibaud-mortiz-afp-getty-2048x1365.jpg"
+IMAGE_ADDRESS="https://www.pommri.com/blog/wp-content/uploads/2019/03/hand-xray-177559095.jpg"
 IMAGE_SIZE=(224, 224)
 IMAGE_NAME="user_image.png"
 CLASS_LABEL=["nowildfire", "wildfire"]
