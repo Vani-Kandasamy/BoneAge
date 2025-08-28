@@ -2,7 +2,4 @@ streamlit
 numpy
 scikit-learn
 tensorflow
-google-auth
-google-cloud-storage
-Authlib
 
