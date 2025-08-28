@@ -59,19 +59,26 @@ def run_app():
     st.subheader("Predict the bone age")
     st.image(IMAGE_ADDRESS, caption="Bone Age")
     st.subheader("Please upload your image")
+
+    # Radio button for selecting gender
+    gender = st.radio("Select Gender", ("Male", "Female"))
+    gender_feature = 1 if gender == "Male" else 0
+
     image = st.file_uploader("Please upload your image", type=["jpg", "png", "jpeg"], accept_multiple_files=False, help="Upload an Image")
     if image:
         user_image = Image.open(image)
         user_image.save(IMAGE_NAME)
         st.image(user_image, caption="User uploaded an image")
         with st.spinner("Processing..."):
-            image_features=featurization(IMAGE_NAME, ConvNeXtXLarge_featurize_model) 
-            model_predict=regression_model.predict(image_features)
-            result=model_predict[0]
+            image_features = featurization(IMAGE_NAME, ConvNeXtXLarge_featurize_model)
+
+            # Append gender feature to image features
+            image_features_with_gender = np.append(image_features, [[gender_feature]], axis=1)
+
+            model_predict = regression_model.predict(image_features_with_gender)
+            result = model_predict[0]
             st.success(f"Prediction: {result}")
 
-
-    
 run_app()
 
 
