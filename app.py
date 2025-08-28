@@ -10,7 +10,7 @@ from keras.models import Model
 
 
 
-IMAGE_ADDRESS="https://www.pommri.com/blog/wp-content/uploads/2019/03/hand-xray-177559095.jpg"
+IMAGE_ADDRESS="https://www.mdpi.com/applsci/applsci-10-07233/article_deploy/html/images/applsci-10-07233-g006-550.jpg"
 IMAGE_SIZE=(224, 224)
 IMAGE_NAME="user_image.png"
 CLASS_LABEL=["nowildfire", "wildfire"]
