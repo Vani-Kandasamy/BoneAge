@@ -10,7 +10,7 @@ from keras.models import Model
 
 
 
-IMAGE_ADDRESS="https://www.mdpi.com/applsci/applsci-10-07233/article_deploy/html/images/applsci-10-07233-g006-550.jpg"
+IMAGE_ADDRESS="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-022-05282-z/MediaObjects/41598_2022_5282_Fig1_HTML.png"
 IMAGE_SIZE=(224, 224)
 IMAGE_NAME="user_image.png"
 CLASS_LABEL=["nowildfire", "wildfire"]
