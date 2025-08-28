@@ -4,7 +4,7 @@ import numpy as np
 from tensorflow import keras
 from PIL import Image
 import pickle
-from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2
+from tensorflow.keras.applications.mobilenet_v2 import ConvNeXtXLarge
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from keras.layers import GlobalAveragePooling2D
 from keras.models import Model
